@@ -1,0 +1,153 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --azul: #4B93BF;
+    --cor-de-fundo: #00030C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Merriweather', sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 52px;
+}
+
+h1,
+h2,
+h3 {
+    color: black;
+}
+
+h2,
+h3 {
+    padding-top: 24px;
+    padding-bottom: 12px;
+}
+
+p {
+    text-align: left;
+    line-height: 32px;
+    margin-bottom: 15px;
+    text-indent: 32px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--azul);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+
+header img {
+    width: 495px;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 2em;
+    font-size: 12px;
+}
+
+.nav-menu ul li a {
+    display: block;
+    padding: 8px 15px;
+    color: white;
+    /*uppercase*/
+    text-transform: uppercase;
+}
+
+.cursos-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+.curso-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #e8e8e8;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 360px;
+    margin-right: 30px;
+    height: fit-content;
+}
+
+.curso-card img {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    border-radius: 30px 30px 0px 0px;
+    padding: 30px;
+    padding-bottom: 0px;
+}
+
+.curso-card-meta {
+    padding: 30px;
+}
+
+.curso-card-meta h2 {
+    margin-bottom: 21px;
+    text-transform: uppercase;
+
+    color: black;
+}
+
+.curso-card-meta p,
+.curso-card-meta h3 {
+    margin-bottom: 14px;
+    color: #747474;
+}
+
+.curso-card-meta button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px 10px 10px;
+    border-radius: 0px;
+    background-color: black;
+    margin-top: 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.5rem;
+    letter-spacing: 0px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    nav {
+        display: none;
+    }
+}
+
+@media (max-width: 1220px) {
+    .nav-menu ul {
+        display: none;
+    }
+}

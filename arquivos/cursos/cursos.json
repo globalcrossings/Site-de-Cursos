@@ -1,0 +1,51 @@
+[
+    {
+        "id": 0,
+        "nome": "O Básico do Direito à Saude",
+        "descricao": "Uma introdução clara e acessível aos fundamentos do direito à saúde e aos caminhos para sua efetivação na prática.",
+        "url": "o_basico_do_direito_a_saude",
+        "imagem": "m_flipchart.png",
+        "dataAlteracao": "2023-05-08",
+        "video": "https://www.youtube.com/embed/dQw4w9WgXcQ?si=HupyFK9W2vJbfuqf",
+        "capitulos": [
+            {
+                "id": 1,
+                "nome": "História do Direito da Saúde"
+            },
+            {
+                "id": 2,
+                "nome": "Características"
+            },
+            {
+                "id": 3,
+                "nome": "Implicação na prática"
+            },
+            {
+                "id": 4,
+                "nome": "Impacto mundial"
+            }
+        ],
+        "ficha": [
+            {
+                "titulo": "Coordenação e Revisão",
+                "nome": "Claudia Loureiro",
+                "link": ""
+            },
+            {
+                "titulo": "Escrita",
+                "nome": "Yasmim Kamila da Costa Ribeiro",
+                "link": ""
+            },
+            {
+                "titulo": "Ilustrações",
+                "nome": "Regaradi",
+                "link": "https://www.fiverr.com/regaradi/draw-anything-with-watercolor-illustration-style?context_referrer=collection_page&ref_ctx_id=5676fd0a4d064fe5aeb1e933f1985b5a&pckg_id=1&pos=2&seller_online=true&imp_id=a94a32ab-28b8-4b7f-91c9-e42a10eade58#"
+            },
+            {
+                "titulo": "Desenvolvimento Web",
+                "nome": "DevDaniFibra",
+                "link": "https://devdanifibra.vercel.app"
+            }
+        ]
+    }
+]

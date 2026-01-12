@@ -1,0 +1,50 @@
+/* Fundo escurecido + desfocado */
+.curso-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+/* Modal em si */
+.curso-modal {
+    background: #fff;
+    width: min(90%, 420px);
+    padding: 1.5rem;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+.curso-modal h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Botão de fechar */
+.curso-modal-fechar {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Estado aberto */
+.curso-modal-overlay.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
