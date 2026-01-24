@@ -290,6 +290,16 @@ article ul li {
     margin-right: 0.5rem;
 }
 
+.li-strong,
+.li-strong::marker {
+    font-weight: bold;
+    color: #053c7a;
+}
+
+.marker::marker {
+    color: #053c7a;
+}
+
 /* ============= TABELAS ============= */
 
 table {
