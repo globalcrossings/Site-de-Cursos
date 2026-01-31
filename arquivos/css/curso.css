@@ -1,12 +1,15 @@
 @import '_uso_geral.css';
 
 .curso-main {
-    padding: 30px;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 30px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     gap: 30px;
     margin: 0 auto;
-    width: 70%;
+    width: 100%;
 }
 
 .curso-main img {
@@ -227,49 +230,6 @@ strong {
     text-align: left;
 }
 
-@media (max-width: 1200px) {
-    .curso-imagem {
-        padding: 0;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .curso-imagem p {
-        width: 100%;
-        padding-left: 52px;
-        padding-right: 52px;
-    }
-
-    .curso-producao {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .curso-producao-esquerda p,
-    .curso-producao-direita p {
-        text-align: center;
-    }
-}
-
-@media (max-width: 600px) {
-    .curso-imagem {
-        padding: 0;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .curso-imagem img {
-        width: 100%;
-        height: auto;
-    }
-
-    .curso-imagem p {
-        padding-left: 20px;
-        padding-right: 20px;
-        margin: 0;
-    }
-}
-
 article ol,
 article ul {
     padding-left: 64px;
@@ -302,9 +262,16 @@ article ul li {
 
 /* ============= TABELAS ============= */
 
+.curso-tabela {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
+    min-width: 600px;
     border: 1px solid #333;
     text-align: center;
     margin: 52px 0;
@@ -331,4 +298,172 @@ th {
 tr td {
     border-right: 1px dashed #333;
     border-bottom: 1px solid #333;
+}
+
+.botao-quiz-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.btn-quiz {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, var(--azul), #356d8f);
+    color: var(--branco-principal);
+    border: none;
+    border-radius: 14px;
+    padding: 1.2rem 1.6rem;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(75, 147, 191, .35);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(75, 147, 191, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 18px rgba(75, 147, 191, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(75, 147, 191, 0);
+    }
+}
+
+.btn-quiz {
+    animation: pulse 3s infinite;
+}
+
+.btn-quiz:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(75, 147, 191, .5);
+}
+
+.btn-quiz .mascote {
+    font-size: 2rem;
+}
+
+.btn-quiz .texto {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: 600;
+}
+
+.btn-quiz small {
+    font-size: .75rem;
+    color: var(--cinza-secundario);
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+
+    .curso-main {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .curso-imagem {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .curso-imagem p {
+        width: 100%;
+        padding-left: 52px;
+        padding-right: 52px;
+    }
+
+    .curso-producao {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .curso-producao-esquerda p,
+    .curso-producao-direita p {
+        text-align: center;
+    }
+
+    .curso-producao-imagem {
+        margin: 20px 0;
+        width: auto;
+    }
+}
+
+@media (max-width: 840px) {
+
+    #tic-toggle {
+        display: block;
+    }
+
+    .navegador-curso {
+        height: min-content;
+    }
+
+    .navegador-curso.open {
+        top: 50px;
+        transform: translateY(0);
+        height: 90vh;
+    }
+
+    .curso-nav-menu {
+        display: none;
+    }
+
+    .curso-nav-menu.mobile {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header img {
+        width: 80%;
+        height: auto;
+    }
+
+    .curso-imagem {
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .curso-imagem img {
+        width: 95%;
+        height: auto;
+        padding-bottom: 32px;
+        padding-top: 32px;
+    }
+
+    .curso-imagem p {
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0;
+    }
+
+    article ol,
+    article ul {
+        padding-left: 24px;
+    }
+
+    .btn-quiz {
+        width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    article ol,
+    article ul {
+        padding-left: 12px;
+    }
 }

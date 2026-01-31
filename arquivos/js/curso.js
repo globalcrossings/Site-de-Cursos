@@ -27,7 +27,7 @@ export async function carregarCursos() {
     /* Listener específico no botão */
     document.querySelectorAll(".abrir-curso-modal").forEach(botao => {
         botao.addEventListener("click", (event) => {
-            event.stopPropagation(); // 🔥 AQUI é o lugar certo
+            event.stopPropagation();
             abrirModal(botao.dataset.id);
         });
     });
@@ -49,6 +49,7 @@ export async function abrirCurso(id) {
     document.getElementById("dataCurso").innerHTML = curso.dataAlteracao
     document.getElementById("capaCurso").src = `arquivos/cursos/${curso.url}/imagens/${curso.imagem}`
     document.getElementById("producaoCurso").src = `arquivos/cursos/${curso.url}/imagens/${curso.imagem}`
+    document.getElementById("formQuiz").src = curso.forms
 
     for (let i = 0; i < (curso.capitulos).length; i += 1) {
         let sessao = await carregarHTML(`${curso.url}/capitulos/${curso.capitulos[i].id} - ${curso.capitulos[i].nome}`)
@@ -58,11 +59,11 @@ export async function abrirCurso(id) {
 
     for (let i = 0; i < curso.ficha.length; i += 1) {
 
-        let produtorAtual = (curso.ficha[i].link == "")? 
-            `<p>${curso.ficha[i].nome} - ${curso.ficha[i].titulo}</p>`:
+        let produtorAtual = (curso.ficha[i].link == "") ?
+            `<p>${curso.ficha[i].nome} - ${curso.ficha[i].titulo}</p>` :
             `<p>${curso.ficha[i].nome} - ${curso.ficha[i].titulo}&nbsp;<a href="${curso.ficha[i].link}" target="_blank" rel="noopener">[site]</a></p>`;
 
-        (i % 2 == 0)? producaoEsquerda.innerHTML += produtorAtual : producaoDireita.innerHTML += produtorAtual
+        (i % 2 == 0) ? producaoEsquerda.innerHTML += produtorAtual : producaoDireita.innerHTML += produtorAtual
     }
 }
 
@@ -78,7 +79,9 @@ function getTitulos(titulo) {
 
     // Abrir o menu ao clicar
     toggle.addEventListener("click", () => {
-        document.querySelector(".navegador-curso").classList.toggle("open");
+        const navegador = document.querySelector(".navegador-curso");
+        navegador.classList.toggle("open");
+        document.querySelector(".curso-nav-menu").classList.toggle("mobile");
     });
 
     // Listar H1 e H2
@@ -130,7 +133,6 @@ function getTitulos(titulo) {
     );
 
     headings.forEach(h => observer.observe(h));
-    console
 }
 
 export async function abrirModal(id) {

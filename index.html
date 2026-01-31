@@ -4,10 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Global Crossings</title>
     <link rel="stylesheet" href="arquivos/style.css">
     <script src="arquivos/script.js" type="module"></script>
     <link rel="shortcut icon" href="arquivos/imagens/favicon.ico" type="image/x-icon">
+
+    <!-- Google fonts Merriweather e Prata -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -19,12 +28,34 @@
             </a>
         </div>
         <nav class="nav-menu">
-            <ul>
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <ul id="navMenuList">
                 <li><a href="https://www.globalcrossings.com.br/">Home</a></li>
                 <li><a href="https://www.globalcrossings.com.br/institucional/">Institucional</a></li>
                 <li><a href="https://www.globalcrossings.com.br/revista/index.php/gc">Revista</a></li>
                 <li><a href="https://www.globalcrossings.com.br/newsletter/">Newsletter</a></li>
-                <li><a href="">Grupos de pesquisa</a></li>
+
+                <li class="dropdown">
+                    <a href="https://www.globalcrossings.com.br/grupos-2/" class="active">Grupos de pesquisa ▼</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="https://www.globalcrossings.com.br/oieods/">OIEODS/UFO</a>
+                        </li>
+                        <li>
+                            <a href="https://www.globalcrossings.com.br/bbdh/">
+                                BBDH/UFU
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.globalcrossings.com.br/clinica/">HUMANITAS/UFU</a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li><a href="https://www.globalcrossings.com.br/editais/">Editais</a></li>
                 <li><a href="https://www.globalcrossings.com.br/eventos/">Eventos</a></li>
                 <li><a href="https://www.globalcrossings.com.br/noticias-2/">notícias</a></li>
@@ -57,6 +88,10 @@
             </p>
         </div>
     </div>
+
+    <footer>
+        @2026 <a href="https://devdanifibra.vercel.app" target="_blank">devdanifibra</a>
+    </footer>
 
 </body>
 

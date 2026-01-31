@@ -6,16 +6,40 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (document.getElementById("cursosContainer")) {
 
-        carregarCursos()
+        carregarCursos();
 
         document.querySelectorAll("#abrirCursoModal").forEach(botao => {
             botao.addEventListener("click", (event) => {
                 event.stopPropagation()
                 const id = botao.getAttribute("data-id")
-                //abrirCurso(id)
-                console.log("Clicou no botão do curso " + id)
             })
         })
     }
     if ((window.location.href).includes("curso.html")) abrirCurso(idUrl)
+});
+
+
+// Modal Quiz
+const abrirQuiz = document.getElementById("abrirQuiz");
+if (abrirQuiz) {
+    const modalQuiz = document.getElementById("modalQuiz");
+    const fecharQuiz = document.getElementById("fecharQuiz");
+
+    abrirQuiz.addEventListener("click", () => {
+        modalQuiz.classList.add("ativo");
+    });
+
+    fecharQuiz.addEventListener("click", () => {
+        modalQuiz.classList.remove("ativo");
+    });
+}
+
+// Menu responsivo
+const menuToggle = document.getElementById('menuToggle');
+const navMenuList = document.getElementById('navMenuList');
+menuToggle.addEventListener('click', () => {
+    const icon = menuToggle.querySelector('i');
+    icon.classList.toggle('bi-list');
+    icon.classList.toggle('bi-x-lg');
+    navMenuList.classList.toggle('ativo');
 });

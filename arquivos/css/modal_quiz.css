@@ -1,0 +1,65 @@
+.modal-quiz {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-quiz.ativo {
+    display: flex;
+}
+
+.modal-conteudo {
+    background: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    width: min(90%, 900px);
+    height: 80vh;
+    border-radius: 18px;
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.fechar {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    background: none;
+    border: none;
+    color: var(--cinza-secundario);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mascote-modal {
+    font-size: 3rem;
+}
+
+.cabecalho p {
+    color: var(--cinza-secundario);
+    margin-top: .2rem;
+}
+
+.area-form {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.area-form iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #fff;
+}
