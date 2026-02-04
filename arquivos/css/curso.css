@@ -462,6 +462,7 @@ tr td {
 }
 
 @media (max-width: 400px) {
+
     article ol,
     article ul {
         padding-left: 12px;
